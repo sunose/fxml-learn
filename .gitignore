@@ -1,0 +1,7 @@
+*.exe
+*.o
+*.bak
+*.class
+/dist/
+/build/
+/nbproject/private/
