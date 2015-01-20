@@ -1,5 +1,4 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?language javascript?>
 <?import java.lang.*?>
 <?import java.util.*?>
 <?import javafx.scene.*?>
@@ -54,24 +53,13 @@
 </TableView>   
      <HBox spacing="10" alignment="bottom_right" GridPane.columnIndex="0" 
           GridPane.rowIndex="2">
-<fx:script>
-        importPackage(java.lang);  
-        importPackage(javafx.scene.control);
-
-   function handleSubmitButtonAction(event){
-Alert alert = new Alert(AlertType.INFORMATION);
-alert.setTitle("Information Dialog");
-alert.setHeaderText("Look, an Information Dialog");
-alert.setContentText("I have a great message for you!");
-alert.showAndWait();        
-             }
-         </fx:script>         
+        
           <TextField fx:id="firstNameField" promptText="First Name"
                prefWidth="90"/>
           <TextField fx:id="lastNameField" promptText="Last Name"
                prefWidth="90"/>
           <TextField fx:id="emailField" promptText="email"
                prefWidth="150"/>
-          <Button text="Add" onAction="handleSubmitButtonAction(event);"/>
+          <Button text="Add" onAction="#handleSubmitButtonAction"/>
      </HBox>
 </GridPane>

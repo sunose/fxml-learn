@@ -11,9 +11,7 @@ import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
-import javafx.scene.control.Label;
-import javafx.scene.control.TableView;
-import javafx.scene.control.TextField;
+import javafx.scene.control.*;
 
 /**
  *
@@ -64,5 +62,15 @@ public class FXMLDocumentController implements Initializable {
             "email@emai.com "+count
         ));
         }
-    }        
+    }
+  @FXML 
+  protected void handleSubmitButtonAction(ActionEvent event)  
+  {
+Alert alert;
+        alert = new Alert(Alert.AlertType.INFORMATION);
+alert.setTitle("Information Dialog");
+alert.setHeaderText("Look, an Information Dialog");
+alert.setContentText("I have a great message for you!");
+    alert.showAndWait();      
+  }
 }
